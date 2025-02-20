@@ -25,9 +25,22 @@
           that is able to recognize words and translate ASL video to text.
         </p>
 
+        {% if result %}
+        <p>
+          <strong>Result:</strong> {{ result }}
+        </p>
+        {% endif %}
+
         <form action="/" method="post" enctype="multipart/form-data">
-          <label>Upload Image</label>
-          <input type="submit" value="Upload image and detect ASL" />
+          {% csrf_token %}
+          <div>
+            <label class="block text-sm/6 font-medium text-gray-900">Upload Image</label>
+            <input type="file" id="file" name="file">
+          </div>
+
+          <div>
+            <input class="rounded-md bg-white px-2.5 py-1.5 text-sm font-semibold text-gray-900 ring-1 shadow-xs ring-gray-300 ring-inset hover:bg-gray-50" type="submit" value="Upload image and detect ASL" />
+          </div>
         </form>
 
       </div>
