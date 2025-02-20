@@ -1,0 +1,38 @@
+{% extends 'sdhacknight/base.html' %}
+{% load static %}
+
+
+
+
+{% block main %}
+
+  <div class="container mx-auto">
+
+    <section class="my-6 grid grid-cols-1 ">
+      <div>
+        <h2>Using computer vision to detect American Sign Language in Images</h2>
+        <p>
+
+          For this project, I am using the <a href="https://eyepop.ai">EyePop.ai</a> API
+          to detect hands and fingers in uploaded images.
+
+
+
+        </p>
+
+        <p>
+          This could be a quick first step before putting images or video through a true ASL translation model
+          that is able to recognize words and translate ASL video to text.
+        </p>
+
+        <form action="/" method="post" enctype="multipart/form-data">
+          <label>Upload Image</label>
+          <input type="submit" value="Upload image and detect ASL" />
+        </form>
+
+      </div>
+    </section>
+
+  </div> <!-- /container -->
+
+{% endblock main %}

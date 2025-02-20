@@ -1,0 +1,44 @@
+{% load static %}
+
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    {% block metas %}{% endblock metas %}
+
+    <title>{% block title %}Home{% endblock title %} · SD Hack Night 2025</title>
+
+    <link href="{% static 'main.css' %}" rel="stylesheet">
+
+  </head>
+
+  <body>
+    <header class="bg-slate-700">
+      <nav class="container flex flex-wrap justify-between items-center py-6">
+        {% url 'index' as index_url %}
+        <a class="text-slate-100" href="{% if request.path != index_url %}{{ index_url }}{% else %}#{% endif %}">
+          <span>SD Hack Night 2025</span>
+        </a>
+      </nav>
+    </header>
+
+    <main role="main">
+      {% block main %}{% endblock main %}
+    </main>
+
+    {# FOOTER #}
+    <footer class="container mx-auto">
+      <hr>
+
+      <div class="grid grid-cols-1 md:gap-4 md:grid-cols-3 mb-8">
+        <p class="text-sm mb-1">&copy; {% now "Y" %} David Fischer</p>
+        <p class="text-sm mb-1 md:text-center">Edit this site on <a href="https://github.com/davidfischer/sdhacknight/" rel="nofollow noopener noreferrer">GitHub</a></p>
+        <p class="text-sm mb-1 md:text-right">v{{ APP_VERSION }}{% if APP_REVISION %} (<a href="https://github.com/davidfischer/sdhacknight/commit/{{ APP_REVISION }}">{{ APP_REVISION }}</a>){% endif %}</p>
+      </div>
+
+    </footer>
+
+  </body>
+</html>

@@ -1,0 +1,16 @@
+# This is a sample of environment variables which are used only to run Docker locally.
+# These are never used in production.
+
+# Django
+# ------------------------------------------------------------------------------
+# Run Django in production mode (DEBUG=False)
+DJANGO_SETTINGS_MODULE=config.settings.prod
+
+# Use a strong secret in production
+SECRET_KEY="this-is-a-bad-secret"
+
+
+# PostgreSQL
+# ------------------------------------------------------------------------------
+# This must match .env/postgres
+DATABASE_URL=pgsql://localuser:localpass@postgres:5432/sandiegopython

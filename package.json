@@ -1,0 +1,28 @@
+{
+  "name": "sdhacknight2025",
+  "version": "0.1.0",
+  "description": "San Diego SD Hack Night",
+  "scripts": {
+    "dist": "npx @tailwindcss/cli -i ./assets/src/input.css -o ./assets/dist/main.css --minify",
+    "build": "npx @tailwindcss/cli -i ./assets/src/input.css -o ./assets/dist/main.css",
+    "watch": "npx @tailwindcss/cli -i ./assets/src/input.css -o ./assets/dist/main.css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/davidfischer/sdhacknight2025.git"
+  },
+  "engines": {
+    "npm": ">=10.0.0 <11.0.0",
+    "node": ">=20.0.0 <21.0.0"
+  },
+  "author": "San Diego Python & Contributors",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sandiegopython/sdhacknight2025/issues"
+  },
+  "homepage": "https://github.com/sandiegopython/sdhacknight2025#readme",
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.0.0",
+    "tailwindcss": "^4.0.0"
+  }
+}
