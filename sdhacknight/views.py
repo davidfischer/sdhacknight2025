@@ -17,6 +17,7 @@ class HomePageView(TemplateView):
     template_name = "sdhacknight/index.html"
 
     def asl_present(self, result):
+        """I'm not proud of this but so it goes. With more time, it would be better."""
         result_str = str(result)
         if "thumb" in result_str:
             return True
